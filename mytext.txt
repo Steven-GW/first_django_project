@@ -1,1 +1,45 @@
   Hello there 	Steven
+
+git config --global user.name "Steven-GW"
+
+git config --global user.email witbooisgw@gmail.com
+
+git config --list
+
+ pwd
+/c/Users/User/Desktop
+
+cd C:Users/User
+
+cd Documents/
+
+cd vscode\ projects/
+
+cd myproject
+
+git init
+
+git status
+
+git add --all
+
+git status
+
+git commit -m "Lesson5"
+
+git log
+
+	  now before pushing to GitHub (from Git Bash), create a new repository in Git Hub, name it first_django_project
+
+	  output: git remote add origin https://github.com/Steven-GW/first_django_project.git 
+		  
+		  paste this in Git Bash and press enter
+
+git remote add origin https://github.com/Steven-GW/first_django_project.git
+
+git remote -v
+
+git branch -M main
+
+git push -u origin main
+
