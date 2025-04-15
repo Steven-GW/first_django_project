@@ -21,9 +21,9 @@
         <a href="/about">
             <span role="img" aria-label="About" title="About">😀</span>
         </a>|
-        <a href="{% url 'posts:list' %}">
+        {% comment %} <a href="{% url 'posts:list' %}">
             <span role="img" aria-label="Daily Posts" title="Daily Posts">📰</span>
-        </a>|
+        </a>| {% endcomment %}
         <a href="{% url 'users:register' %}">
             <span role="img" aria-label="User Registration" title="User Registration">🚀</span>
         </a>|

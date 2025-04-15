@@ -15,12 +15,16 @@ def register_view(request):
                   {"form": form})
 
 
+
+
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
+            #user = form.get_user()
             login(request, form.get_user())
-            return redirect("posts:list")
+            print(form.get_user().get_username())
+            return redirect('posts:list')
 
     else:
         form = AuthenticationForm()
