@@ -68,6 +68,7 @@ a:hover {
     width: 125px;
     border: none;
     cursor: pointer;
+    background-color: #44B78B;
 }
 
 .helptext {

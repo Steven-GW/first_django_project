@@ -13,6 +13,7 @@
         src= "{{ post.banner.url }}"
         alt="{{post.title}}"
     />
+    <a href="{% url 'posts:edit_post' post.id %}"><button class="form-submit">Edit Post</button></a>
     <h1>{{ post.title }}</h1>
         <p>{{ post.date }}</p>
         <p>{{ post.body }}</p>

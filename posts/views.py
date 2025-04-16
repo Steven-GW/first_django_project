@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from django.contrib.auth import logout
 
@@ -10,7 +11,20 @@ def posts_list(request):
 
 def post_page(request, slug):
     post = Post.objects.get(slug = slug)
+    print(post.id)
     return render(request, 'posts/post_page.html', {'post': post})
+
+
+def edit_post(request, id):
+    post = get_object_or_404(Post, id=id)
+    if (request.method == 'POST'):
+        post.title = request.POST.get('title')
+        post.body = request.POST.get('body')
+        post.slug = request.POST.get('slug')
+        post.save()
+        return redirect('posts:list')
+    
+    return render(request, "posts/edit_post.html", {"post": post})
 
 
 def newpost(request):

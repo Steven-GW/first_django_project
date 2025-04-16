@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add post
+{% endblock %}
+
+
+{% block content %}
+
+    <h2>Add a new post</h2>
+
+    <div class="post-details">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="field">
+                <label for="titlee">Title: </label>
+                <input type="text" id="titlee" name="title" placeholder="post title">
+            </div>
+
+            <div class="field">
+                <label for="boddy">Body: </label>
+                <input type="text" id="boddy" name="body" placeholder="post body">
+            </div>
+
+            <div class="field">
+                <label for="slugg">Slug: </label>
+                <input type="text" id="slugg" name="slug" placeholder="psot slug">
+            </div>
+
+            <div class="field">
+                <button class="form-submit">Save </button>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}
