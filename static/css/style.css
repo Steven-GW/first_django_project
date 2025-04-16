@@ -9,6 +9,7 @@ body {
     background-color: black;
     color: whitesmoke;
     font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -84,4 +85,25 @@ a:hover {
 
 .errorlist li::marker {
     content: '🚨 ';
+}
+
+.page-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-top button {
+    margin-right: 25px;
+    margin-top: 15px;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 20px;
+    background-color: #44B78B;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.page-top h5 {
+    margin-top: 20px;
 }
