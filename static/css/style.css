@@ -107,3 +107,13 @@ a:hover {
 .page-top h5 {
     margin-top: 20px;
 }
+
+.post-details {
+    display: flex;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.field {
+    margin-left: 25px;
+}

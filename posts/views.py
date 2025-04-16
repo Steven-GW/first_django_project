@@ -14,6 +14,15 @@ def post_page(request, slug):
 
 
 def newpost(request):
+    if (request.method == 'POST'):
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        slug = request.POST.get('slug')
+        ban = request.POST.get('postbanner')
+        new_post = Post.objects.create(title=title, body=body, slug=slug, user=request.user)
+        new_post.save()
+        return redirect('posts:list')
+
     return render(request, "posts/newpost.html")
 
 
