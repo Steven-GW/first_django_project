@@ -67,6 +67,7 @@ a:hover {
     border-radius: 10px;
     width: 125px;
     border: none;
+    cursor: pointer;
 }
 
 .helptext {
